@@ -45,14 +45,35 @@ def output_by_platform(attck):
     for i in platforms_dict:
         table.add_row([i, platforms_dict[i], str(round(
             (platforms_dict[i]/total_tech)*100, 2))])
-    print(table)
+    table.reversesort = True
+    print(table.get_string(sortby="Techniques Count"))
+
+
+def output_by_actors(attck):
+    table = prettytable.PrettyTable(hrules=prettytable.ALL)
+    table.field_names = ["Technique Id", "Technique Name", "Actors"]
+    for technique in attck.enterprise.techniques:
+        table.add_row([technique.id, technique.name, len(technique.actors)])
+    table.reversesort = True
+    print(table.get_string(sortby="Actors"))
 
 
 def main():
 
+    parser = argparse.ArgumentParser()
+    required = parser.add_argument_group('required arguments')
+    required.add_argument(
+        '-s', choices=['general', 'platform', 'actors'], required=True)
+    args = parser.parse_args()
+
     attck = Attck()
-    output_all(attck)
-    output_by_platform(attck)
+
+    if args.s == "general":
+        output_all(attck)
+    elif args.s == "platform":
+        output_by_platform(attck)
+    elif args.s == "actors":
+        output_by_actors(attck)
 
 
 if __name__ == "__main__":
