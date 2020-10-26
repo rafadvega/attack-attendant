@@ -14,6 +14,7 @@ def output_screen(dic):
     for key in dic:
         table.add_row([key, dic[key]])
     print(table)
+    print("TOTAL: " + str(len(dic)))
 
 
 def output_csv(dic, file_name):
