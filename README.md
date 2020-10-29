@@ -11,3 +11,4 @@ This repository contains various scripts for working with ATT&CK content.
 | [stats.py](stats.py) | Return stats. |
 | [get-enterprise.py](get-enterprise.py) |  Script to enumerate tactics, techniques and get matrix filter by platform |
 | [coverage-enterprise.py](coverage-enterprise.py) |  Script calculate matrix coverage. |
+| [json-generator.py](coverage-enterprise.py) |  Script export json navigator layer from csv score file with format "ID,Coverage". |
