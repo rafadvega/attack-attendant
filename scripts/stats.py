@@ -2,7 +2,6 @@ import argparse
 import prettytable
 import csv
 from pyattck import Attck
-from prettytable import ALL as ALL
 
 
 def output_all(attck):
