@@ -6,8 +6,4 @@ This repository contains various scripts for working with ATT&CK content.
 
 | script | description |
 |:-------|:------------|
-| [enumerate-enterprise.py](enumerate-enterprise.py) | Script to enumerate tactics, techniques, actors, tools and malwares from enterprise matrix. |
-| [check-actor-detection.py](check-actor-detection.py) | Returns detected or undetected actors from a list of detectable techniques. |
-| [get-enterprise.py](get-enterprise.py) |  Script to enumerate tactics, techniques and get matrix filter by platform |
-| [coverage-enterprise.py](coverage-enterprise.py) |  Script calculate matrix coverage. |
-| [json-generator.py](coverage-enterprise.py) |  Script export json navigator layer from csv score file with format "ID,Coverage". |
+| [json-generator.py](coverage-enterprise.py) |  Script export json navigator layer from csv score file with format "ID;Coverage". |
